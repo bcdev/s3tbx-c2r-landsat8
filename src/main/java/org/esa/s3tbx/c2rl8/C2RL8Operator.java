@@ -32,6 +32,7 @@ import java.io.InputStream;
 
 
 // todo (mp) - Add flags band and check for OOR of inputs and outputs of the NNs.
+// todo (mp) - add min/max values of NN inputs and outputs to metadata
 
 @OperatorMetadata(alias = "C2RL8", version = "0.1-SNAPSHOT",
                   authors = "Roland Doerffer, Marco Peters (Brockmann Consult)",
