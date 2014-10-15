@@ -76,6 +76,7 @@ public class C2RL8Operator extends PixelOperator {
     private boolean useAlternativeAtmoNet;
 
     // todo (mp) - the initial enable state of the components not correct
+    // todo (mp) - textboxes should not expand till infinity if file path is selected
     @Parameter(label = "Alternative neural net file for AC")
     private File alternativeAtmoNetFile;
 
@@ -83,6 +84,7 @@ public class C2RL8Operator extends PixelOperator {
     private boolean useAlternativeIOPNet;
 
     // todo (mp) - the initial enable state of the components not correct
+    // todo (mp) - textboxes should not expand till infinity if file path is selected
     @Parameter(label = "Alternative neural net file for IOP retrieval")
     private File alternativeIOPNetFile;
 
