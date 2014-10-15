@@ -1,0 +1,51 @@
+<module>
+    <manifestVersion>1.0.0</manifestVersion>
+    <symbolicName>s3tbx-c2r-landsat8</symbolicName>
+    <version>0.1</version>
+    <name>Case-2-Regional Processor for Landsat 8</name>
+
+    <description>
+        This processor derives Level 2 water quality parameters of
+        coastal waters from atmospherically corrected Landsat8 products.
+    </description>
+
+    <changelog>
+        <![CDATA[
+
+        ]]>
+    </changelog>
+
+    <vendor>Brockmann Consult GmbH</vendor>
+    <contactAddress>Max Planck Str. 2, 21502 Geesthacht (Germany)</contactAddress>
+    <copyright>(C) 2010 by Brockmann Consult GmbH</copyright>
+    <url>http://envisat.esa.int/beam</url>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+
+    <dependency>
+        <module>snap-gpf</module>
+    </dependency>
+    <dependency>
+        <module>s3tbx-landsat-reader</module>
+    </dependency>
+    <dependency>
+        <module>snap-visat-rcp</module>
+        <optional>true</optional>
+    </dependency>
+
+    <categories>Application,Processor,Landsat</categories>
+
+    <extension point="snap-ui:actions">
+        <action>
+            <parent>processing.thematicWater</parent>
+            <id>landsat8Case2Regional</id>
+            <class>org.esa.s3tbx.c2rl8.ui.C2RL8Action</class>
+            <operatorName>C2RL8</operatorName>
+            <dialogTitle>Landsat 8 Case-2 Regional Processor</dialogTitle>
+            <text>Landsat 8 Case-2 Regional Processor...</text>
+            <shortDescr>Generates IOPs for Case-2 water from a Landsat 8 product</shortDescr>
+            <targetProductNameSuffix>_c2rl8</targetProductNameSuffix>
+            <helpId>landsat8Case2Regional</helpId>
+        </action>
+    </extension>
+
+</module>
