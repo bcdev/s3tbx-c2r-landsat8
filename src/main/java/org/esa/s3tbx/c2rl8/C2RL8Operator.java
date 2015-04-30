@@ -233,7 +233,7 @@ public class C2RL8Operator extends PixelOperator {
             }
             targetBand.setUnit(bandConfig.unit);
             targetBand.setDescription(bandConfig.description);
-            targetBand.setNoDataValue(Float.NaN);
+            targetBand.setNoDataValue(bandConfig.noData);
             targetBand.setNoDataValueUsed(true);
         }
 
@@ -272,7 +272,7 @@ public class C2RL8Operator extends PixelOperator {
 
     private void validateSource() {
         if (source.getGeoCoding() == null) {
-            throw new OperatorException("The source product must have be geo-referenced.");
+            throw new OperatorException("The source product must be geo-referenced.");
         }
         for (String expectedBandname : EXPECTED_BANDNAMES) {
             if (!source.containsBand(expectedBandname)) {
